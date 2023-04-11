@@ -10,9 +10,7 @@ echo "🎬 artisan commands"
 php artisan storage:link
 
 # 💡 Group into a custom command e.g. php artisan app:on-deploy
-php artisan migrate
-
-php artisan key:generate
+php artisan migrate --force
 
 echo "🎬 start supervisord"
 
