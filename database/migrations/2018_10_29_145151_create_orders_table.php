@@ -19,8 +19,13 @@ class CreateOrdersTable extends Migration
             $table->string('from');
             $table->string('to');
             $table->UnsignedInteger('owner_id');
+            // $table->foreign('owner_id')->references('id')->on('users')->onDelete('cascade');
+        });
+
+        Schema::table('orders', function($table) {
             $table->foreign('owner_id')->references('id')->on('users')->onDelete('cascade');
         });
+        
     }
 
     /**
