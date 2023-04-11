@@ -14,6 +14,8 @@ php artisan vendor:publish --provider="Maatwebsite\Excel\ExcelServiceProvider" -
 # 💡 Group into a custom command e.g. php artisan app:on-deploy
 php artisan migrate --no-interaction --force
 
+php artisan key:generate
+
 echo "🎬 start supervisord"
 
 supervisord -c $LARAVEL_PATH/.deploy/config/supervisor.conf
